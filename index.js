@@ -12,7 +12,8 @@ app.get("/hng", (req, res) => {
     current_day: moment().format("dddd"),
     utc_time: moment().utc(),
     track,
-    github_file_url: "github",
+    github_file_url:
+      "https://github.com/Muneeza93/hng_backend/blob/master/index.js",
     github_repo_url: "https://github.com/Muneeza93/hng_backend.git",
   };
 
