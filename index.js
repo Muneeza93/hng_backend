@@ -15,6 +15,7 @@ app.get("/hng/api", (req, res) => {
     github_file_url:
       "https://github.com/Muneeza93/hng_backend/blob/master/index.js",
     github_repo_url: "https://github.com/Muneeza93/hng_backend.git",
+    status_code: 200,
   };
 
   res.json(response);
