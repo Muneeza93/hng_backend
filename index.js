@@ -3,7 +3,7 @@ const moment = require("moment");
 const app = express();
 const port = 3000;
 
-app.get("/hng.com/api", (req, res) => {
+app.get("/hng/api", (req, res) => {
   const slack_name = req.query.slack_name;
   const track = req.query.track;
 
@@ -21,5 +21,5 @@ app.get("/hng.com/api", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`server is lstening on port ${port}`);
+  console.log(`server is listening on port ${port}`);
 });
