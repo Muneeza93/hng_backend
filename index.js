@@ -10,7 +10,7 @@ app.get("/hng/api", (req, res) => {
   const response = {
     slack_name,
     current_day: moment().format("dddd"),
-    utc_time: moment().utc(),
+    utc_time: moment.utc().format(),
     track,
     github_file_url:
       "https://github.com/Muneeza93/hng_backend/blob/master/index.js",
