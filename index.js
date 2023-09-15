@@ -28,6 +28,12 @@ const swaggerOptions = {
   },
   apis: ["./src/controller/**/*.js"],
 };
+
+const specs = swaggerJsDoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+
+require("dotenv").config();
+
 const userRoutes = require("./src/routes/user");
 
 app.use(express.json());
