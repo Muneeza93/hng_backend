@@ -1,8 +1,33 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const moment = require("moment");
+const swaggerJsdoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+
 const app = express();
 
+const swaggerOptions = {
+  swaggerDefinition: {
+    openapi: "3.0.3",
+    info: {
+      title: "HNG-BACKEND API's ",
+      description: "hng-backend API documented with swagger",
+      contact: {
+        name: "HNG internship",
+        url: "https://github.com/Muneeza93/hng_backend",
+        email: "sebagabomuneeza@gmail.com",
+      },
+      version: "1.0.1",
+    },
+    server: [
+      {
+        url: "http://localhost:3000",
+        description: "development server",
+      },
+    ],
+  },
+  apis: ["./src/controller/**/*.js"],
+};
 const userRoutes = require("./src/routes/user");
 
 app.use(express.json());
