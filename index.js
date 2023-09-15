@@ -29,7 +29,7 @@ const swaggerOptions = {
   apis: ["./src/controller/**/*.js"],
 };
 
-const specs = swaggerJsDoc(swaggerOptions);
+const specs = swaggerJsdoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 require("dotenv").config();
