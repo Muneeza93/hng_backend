@@ -39,10 +39,10 @@ const userRoutes = require("./src/routes/user");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/hng";
+const mongo_uri = mongodb+srv://sebagabomuneeza:sebagabo@1.com@cluster0.hp9fmdu.mongodb.net/?retryWrites=true&w=majority
 
 mongoose
-  .connect(uri, {
+  .connect(mongo_uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
